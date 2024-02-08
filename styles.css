@@ -1,0 +1,213 @@
+*,
+*:after, /*последним дочерним элементом*/
+*:before { /*первым дочерним элементом*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*учитывать любые границы и отступы в значениях*/
+}
+
+
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;/*межстрочный отступ*/
+  color: #333;
+}
+
+/*Container*/
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/*Intro*/
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;/*100% экрана посетителя*/
+  background: url(img/intro.jpg) center no-repeat ; /*по центру и не повторялось*/
+  background-size: cover; /*занимает все пространство*/
+
+}
+
+.intro__title {
+  font-size: 150px;
+  font-weight: 700px;/*жирность текста*/
+  text-transform: uppercase;/*все заглавные буквы*/
+  text-align: center;
+  line-height: 1;
+
+}
+
+.intro__title:after {/*после элемента intro__title встовляем псево элемент*/
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 60px auto 60px; 
+
+  background-color: #fff;
+  
+
+}
+
+.intro__suptitle {
+  margin-bottom: 15px;
+  font-size: 72px;
+  color: #fff;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  
+}
+
+.intro__iner {
+  color: #fff;
+  width: 100%;
+  max-width: 880;
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+/*Header*/
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding-top: 30px;
+  width: 100%;
+}
+
+.header__logo {
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.header__intr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*Nav*/
+.nav {
+  font-size: 14px;
+  text-transform: uppercase;/*текст заглавные буквы*/
+
+}
+
+.nav__link {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 15px;
+
+  position: relative;/*относительно родтеля появиться полоска*/
+  color: #fff;
+  text-decoration: none; /*убрали подчеркивание*/
+  transition: color .2s linear;/*переход цвета ссылки 2с плавно*/
+}
+
+.nav__link:after {/*создали полоску под тестом*/
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  
+  background-color: #e4d82e;
+  opacity: 0;/*непрозрачность*/
+
+  position: absolute;/*относительно радител relative*/
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  transition: opacity .1s linear;
+
+}
+
+.nav__link:hover {
+  color: #e4d82e;
+
+}
+.nav__link:hover:after {
+  opacity: 1;/*не прозрачность*/
+}
+
+/*button*/
+.btn {
+  display: inline-block;
+  vertical-align: top;
+  padding: 5px 45px;
+
+  border: 2px solid #fff;
+
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  transition: background .1s linear, color .1s linear;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+/*slider*/
+.slider {
+  width: 100%;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.slider__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider__item {
+  width: 23%;
+  padding: 20px 0;
+  position: relative;
+
+  border-top: 3px solid #fff;
+  opacity: .7;
+
+  font-size: 18px;
+  color: #fff;
+  text-transform: uppercase; /*весь текст заглавны буквы*/
+}
+
+.slider__item.active {
+  opacity: 1; /*непрозрачность*/
+}
+
+.slider__item.active:before {/*полосочка над текстом декоротивная*/
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+
+  background-color: #f38181;
+
+  position: absolute;
+  top: -3px;
+  left: 0;
+  z-index: 1;
+}
+
+.slider__num {/*размер номара и жирность*/
+  font-size: 24px;
+  font-weight: 700;
+}
+
+
