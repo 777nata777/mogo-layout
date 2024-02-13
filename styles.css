@@ -281,19 +281,24 @@ hr {
 
 .about__item {
     width: 380px;
-    position: relative;
-    background-color: #95e1d3;
+    
+    
   }
 
-  .about__item:hover .about__img {
-    transform: translate3d(-10px, -10px, 0);
+.about__inner {
+  background-color: #95e1d3;
+  position: relative;
+}
+
+.about__inner:hover .about__img {
+  transform: translate3d(-10px, -10px, 0);
   }
 
-.about__item:hover .about__img img {/*при наводи мышкой*/
+.about__inner:hover .about__img img {/*при наводи мышкой*/
   opacity: .1; /*не прозрачность*/
 }
 
-.about__item:hover .about__text {
+.about__inner:hover .about__text {
   opacity: 1;
 }
 
@@ -323,7 +328,29 @@ hr {
   z-index: 2;
   transform: translate3d(0, -50%, 0);
   transition: opacity .1s linear;
-} 
+}
+
+
+.about__info {
+  margin-top: 20px;
+
+  text-align: center;
+}
+
+.about__name {
+  margin-bottom: 5px;
+
+  font-size: 14px;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.about__prof {
+  font-size: 15px;
+  font-style: italic;
+  font-weight: 300;
+  color: #999;
+}
 
 
 /*Statistisc*/
@@ -561,4 +588,41 @@ hr {
   right: 0;
   transform: rotate(135deg);
   margin: 50px;
+}
+
+/* Social */
+.social {
+  display: flex;
+  justify-content: center;
+}
+
+.social__item { /*параметры иконки*/
+  width: 55px;
+  height: 55px;
+  padding: 12px 10px;
+
+  background-color: #fce38a;
+  border: 1px solid #f38181;
+
+  font-size: 30px;
+  text-decoration: none;
+  color: #f38181;
+  line-height: 1;
+
+  transition: background 1s linear, color 1s linear;/*плавное изменения при наводе*/
+}
+
+.social__item:last-child { /*для последнего элемента,являющийся последним в его родителе*/
+  border-right: 0;
+}
+
+.social__item:hover { /*при наведении на иконку*/
+  color: #fff;
+  background-color: #f38181;
+}
+
+/* logos */
+.logos {
+  display: flex;
+  justify-content: space-between;
 }
