@@ -241,6 +241,12 @@ hr {
   background-size: cover;
 }
 
+.section--map {
+  padding: 40px;
+  background: url("img/map-bg.jpg") no-repeat center;
+  background-size: cover;
+}
+
 .section__Heder {
   width: 100%;
   max-width: 950px;
@@ -751,3 +757,242 @@ hr {
 
   background-color: #d73333;
 }
+
+/* Blog */
+.blog {
+  display: flex;
+  justify-content: space-between;
+}
+
+.blog__item {
+  width: 32%;
+  
+}
+
+.blog__header {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.blog__photo {
+  display: block;
+  max-height: 100%;
+  height: auto;
+}
+
+.blog__date {
+  padding: 10px 20px;
+
+  background-color: #95e1d3;
+  font-size: 15px;
+  font-weight: 300;
+  text-align: center; /*текст по центру*/
+
+  color: #fff;
+  font-style: italic;
+
+  position: absolute;
+  bottom: 10px;
+  left: -10px;
+  z-index: 1;
+}
+
+.blog__date--day {
+  font-size: 30px;
+  line-height: 1;/*межстрочный оступ*/
+  font-weight: 700;
+  font-style: normal;
+}
+
+.blig__content {
+  margin-bottom: 10px;
+}
+
+.blog__title {
+  margin-bottom: 14px;
+
+  font-size: 14px;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.blog__title a {
+  color: inherit; /*Наследование значения родительского элемента чтоб ушло подчеркивание и цвет ссылки*/
+  text-decoration: none;
+}
+.blog__title a:hover {
+  text-decoration: underline;
+}
+
+.blog__footer {
+  padding-top: 14px;
+  border-top: 1px solid #e5e5e5;
+
+  font-size: 15px;
+  font-weight: 300;
+  font-style: italic;
+  color: #999;
+}
+
+.blog-stat__item {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 10px;
+}
+
+.blog-stat__item i {
+  color: #95e1d3;
+  margin: 5px;
+}
+
+.map {
+  text-align: center;
+
+}
+
+.map__title {
+  font-size: 24px;
+  color: #d73636;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.map__title:after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 15px auto 0;
+
+  background-color: #f38181;
+}
+
+.map__title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.map__title a:hover {
+  text-decoration: underline;
+}
+
+
+/* Footer */
+.footer {
+  margin-top: 65px;
+
+  background-color: #f8f8f8;
+}
+
+.footer__iner {
+  padding-bottom: 65px;
+}
+
+.footer__logo {
+  margin-bottom: 30px;
+
+  font-size: 40px;
+  font-weight: bold;
+  color: #ccc;
+}
+.footer__text {
+  margin-bottom: 30px;
+
+  font-size: 15px;
+  color: #999;
+}
+
+.footer__social {
+  margin-bottom: 25px;
+}
+
+.footer__social--header {
+  padding-bottom: 15px;
+  font-size: 14px;
+  color: #333;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.footer__social--header b {
+  font-size: 18px;
+}
+
+.footer__social--content {
+  padding-top: 15px;
+
+  font-size: 15px;
+  color: #999;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.footer__social--content a {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+
+  font-style: 15px;
+  color: #95e1d3;
+}
+
+
+/* Subscride */
+.subscride {
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+}
+
+.subscride__input {
+  width: 60%;
+  padding: 10px 30px;
+
+  background-color: #fff;
+  border: 1px solid #e7e7e7;
+  border-right: 0;
+
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.1;
+  color: #333;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.subscride__input:focus {
+  outline: 0;
+  border-color: #95e1d3;
+}
+
+.subscride__input::placeholder {
+  color: #ccc;
+}
+
+.subscride__btn {
+  width: 40%;
+  padding: 5px;
+  height: 40px;
+
+  background-color: #95e1d3;
+  border: 0;
+  cursor: pointer;
+
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.1;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+
+  transition: background .2s linear;/* плавное изменение фона (linear линейная функция)*/
+}
+
+.subscride__btn:hover {
+  background-color: #6eb3a6;
+}
+
+.subscride__btn:focus {
+  outline: 0; /* убрали обводку, устанавливает большинство свойств обводки в одном объявлении.*/
+}
+
+
