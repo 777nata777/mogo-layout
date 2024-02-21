@@ -8,23 +8,24 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
   <title>Mogo</title>
 </head>
 <div>
 
 
   <!-- Heder -->
-  <header class="header">
+  <header class="header" id="header">
     <div class="container">
       <div class="header__intr">
         <div class="header__logo">Mogo</div>
 
         <nav class="nav">
-          <a class="nav__link" href="#">About</aф>
-          <a class="nav__link" href="#">Service</a>
-          <a class="nav__link" href="#">Work</a>
-          <a class="nav__link" href="#">Blog</a>
-          <a class="nav__link" href="#">Contact</a>
+          <a class="nav__link" active href="#" data-scroll="#about">About</aф>
+          <a class="nav__link" href="#" data-scroll="#services">Service</a>
+          <a class="nav__link" href="#" data-scroll="#blog">Work</a>
+          <a class="nav__link" href="#" data-scroll="#works">Blog</a>
+          <a class="nav__link" href="#" data-scroll="#footer">Contact</a>
           <a class="nav__link" href="#">
             <i class="fas fa-shopping-cart"></i>
           </a>
@@ -44,7 +45,7 @@
 <div class="page">
   
       <!-- Intro -->
-      <div class="intro">
+      <div class="intro" id="intro">
         <div class="container">
           <div class="intro__iner">
             <h2 class="intro__suptitle">Creative template</h2>
@@ -79,8 +80,8 @@
       </div><!--/Intro -->
 
 
-      <!-- Section 1 -->
-      <section class="section">
+      <!-- Section 1 --><!-- About -->
+      <section class="section" id="about">
 
         <div class="container">
 
@@ -103,7 +104,7 @@
             </div>
           </div>
 
-          <div class="about">
+          <div class="about" >
               <div class="about__item">
                 <div class="about__inner">
                   <div class="about__img">
@@ -168,8 +169,8 @@
       </div><!-- /Statistisc 2 -->
 
 
-      <!-- Section3 -->
-      <section class="section">
+      <!-- Section3 --><!-- Services -->
+      <section class="section" id="services">
         <div class="container">
 
           <div class="section__Heder">
@@ -533,8 +534,9 @@
           </div>
 
         </div>
+
         <!-- Works -->
-        <div class="works">
+        <div class="works" id="works">
 
           <div class="works__col">
             <div class="works__item">
@@ -683,8 +685,8 @@
       </section><!-- /section 9 -->
 
 
-    <!-- section 10 -->
-      <section class="section">
+    <!-- section 10 --><!-- Blog -->
+      <section class="section" id="blog">
           <div class="container">
 
             <div class="section__Heder">
@@ -795,7 +797,7 @@
       
 
       <!-- footer -->
-      <footer class="footer">
+      <footer class="footer" id="footer">
         <div class="container">
           <div class="footer__iner">
             <div class="footer__col footer__col--first">
@@ -913,5 +915,9 @@
         </div><!--container-->
       </footer>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="app.js"></script>
+
 </body>
 </html>
