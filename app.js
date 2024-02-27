@@ -24,12 +24,14 @@ $(function() {
 
     /*Smooth scroll*/
     $("[data-scroll]").on("click", function(event){
-        event.preventDefault();    /*при нажатии на ссылки меню мы еремещаемся в тот отдет где нахдиться эта часть*/
+        event.preventDefault();    /*при нажатии на ссылки меню мы перемещаемся в тот отдет где нахдиться эта часть*/
 
-        var blockId = $(this).data('scroll'),
-        blockOffset = $(blockId).offset().top;
+        var $this = $(this), /*закешировали переменную*/
+            blockId = $this.data('scroll'),
+            blockOffset = $(blockId).offset().top;
 
-        console.log(blockOffset);
+        $("#nav a").removeClass("active");
+        $this.addClass("active");
 
         $("html, body").animate({
             scrollTop: blockOffset
@@ -37,8 +39,13 @@ $(function() {
 
     })
 
+    /* Menu nav toggle */
+    $("#nav_toggle").on("click", function(event) {
+        event.preventDefault();
 
-
+        $(this).toggleClass("active");
+        $("#nav").toggleClass("active");
+});
 
 
 

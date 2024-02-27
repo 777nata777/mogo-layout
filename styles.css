@@ -79,7 +79,7 @@ hr {
   
 }
 
-.intro__iner {
+.intro__inner {
   color: #fff;
   width: 100%;
   max-width: 880;
@@ -123,7 +123,7 @@ hr {
   color: #fff;
 }
 
-.header__intr {
+.header__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -348,7 +348,7 @@ hr {
   background-size: cover;
 }
 
-.section__Heder {
+.section__header {
   width: 100%;
   max-width: 950px;
   margin: 0 auto 50px;
@@ -1373,6 +1373,10 @@ hr {
     background-color: #ec908f;
   }
 
+  .nav.active {
+    display: block; /*если бургер меню у меня нажали то разворачивае*/
+  }
+
   .nav__link {
     display: block;
     margin: 0;
@@ -1504,7 +1508,7 @@ hr {
   }
 
   /* Section */
-.section__Heder {
+.section__header {
   margin-bottom: 50px;
 }
 
