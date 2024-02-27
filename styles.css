@@ -192,6 +192,10 @@ hr {
   z-index: 1;
 }
 
+.nav__toggle:focus {
+  outline: 0; /**Сокращённое свойтсов CSS outline ) устанавливает большинство свойств обводки в одном объявлении*/
+}
+
 .nav__toggle--item {
   display: block;
   width: 100%;

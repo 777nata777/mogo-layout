@@ -40,11 +40,12 @@ $(function() {
     })
 
     /* Menu nav toggle */
-    $("#nav_toggle").on("click", function(event) {
-        event.preventDefault();
+    $("#nav_toggle").on("click", function(event) { /**выбираем селекрот nav_toggle следим по клику по этому элементу */
+        event.preventDefault(); /**убрали стандартное поведение кнопки */
 
-        $(this).toggleClass("active");
-        $("#nav").toggleClass("active");
+        $(this).toggleClass("active"); /*дали класс active нашему бургеру*/
+        $("#nav").toggleClass("active");/**при клике добавляем либо убираем класс active для меню */
+        
 });
 
 
