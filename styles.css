@@ -653,19 +653,23 @@ hr {
 
 /*Reviews*/
 .reviews {
-  padding: 0 110px;
   position: relative;
 }
 
 .reviews__item {
+  min-height: 210px;
   padding-left: 255px;
   position: relative;
 }
 
+.reviews .slick-slider {
+  padding: 0 110px;
+}
+
 .reviews__photo {
   display: block;
-  width: 210px;
-  height: 210px;
+  width: 150px;
+  height: 150px;
   border: 2px solid #638d4e;
   border-radius: 50%;
 
@@ -700,9 +704,14 @@ hr {
   background-color: #d73636;
 }
 
-.reviews__btn {
+.slick-arrow {
+  display: block;
   font-size: 0;/*скрыли текст у ссылки*/
   color: transparent;
+
+  border: 0;
+  background: none;
+  cursor: pointer;
 
   position: absolute;
   top: 0;
@@ -710,7 +719,11 @@ hr {
   transform: translateY(-50%);
 }
 
-.reviews__btn:after {
+.slick-arrow:focus {
+  outline: 0;
+}
+
+.slick-arrow:after {
   content: "";
   display: block;
   width: 30px;
@@ -720,16 +733,14 @@ hr {
   border-left: 2px solid #ccc;
 }
 
-.reviews__btn--prev {
+.slick-prev {
   left: 0;
   transform: rotate(-45deg);
-  margin: 50px;
 }
 
-.reviews__btn--next {
+.slick-next {
   right: 0;
   transform: rotate(135deg);
-  margin: 50px;
 }
 
 /* Social */
@@ -1354,18 +1365,18 @@ hr {
 
 @media (max-width: 770px) {
 
-/*Intro*/
-.intro {
+  /*Intro*/
+  .intro {
   min-height: 650px;
-}
+  }
 
-/* Headeer */
+  /* Headeer */
   .header {
     padding: 10px 0;
   }
 
 
-/* Nav */
+  /* Nav */
   .nav {
     display: none;
     width: 100%;/*создали меню при клике на бургер*/
@@ -1391,12 +1402,17 @@ hr {
   .nav__toggle {
     display: block;
   }
-/* Section */
+
+  /* Section */
   .section {
-    padding: 0 40px;
+    padding: 40px 0;
   }
 
-/*About*/
+  .section--devices {
+    padding-bottom: 0;
+  }
+
+  /*About*/
   .about {
     margin-top: 50px;
     justify-content: center;
@@ -1409,16 +1425,16 @@ hr {
   }
 
   .about__item:last-child {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
   }
 
 
-/* Slider */
+  /* Slider */
   .slider__text {
     display: none;
   }
 
-  .slider__item:before {
+  .slider__item.active:before {
     width: 50%;
   }
 
@@ -1488,7 +1504,7 @@ hr {
   }
   .blog__item:last-child {
     margin-bottom: 10px;
-}
+  }
   /* Footer */
   .footer__col--second,
   .footer__col--third {
@@ -1512,12 +1528,12 @@ hr {
   }
 
   /* Section */
-.section__header {
+  .section__header {
   margin-bottom: 50px;
-}
+  }
 
-  .section__title {
-    font-size: 24px;
+  .section__suptitle {
+    font-size: 20px;
   }
 
   .section__title {
@@ -1556,11 +1572,11 @@ hr {
   }
 
   /* Reviews */
-  .reviews {
+  .reviews .slick-slider {
     padding: 0;
   }
 
-  .reviews__btn {
+  .slick-arrow {
     top: 18%;
   }
 
